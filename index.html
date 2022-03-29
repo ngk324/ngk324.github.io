@@ -281,8 +281,9 @@ Each suspect has four available questions, but there is only enough time to ask 
 
 
 
-</tw-passagedata><tw-passagedata pid="3" name="Question the Queen" tags="intro-background" position="800,331" size="100,100">&lt;img src=&quot;https://ngk324.github.io/images/queen.png&quot; alt=&quot;Queen of Mars&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
+</tw-passagedata><tw-passagedata pid="3" name="Question the Queen" tags="intro-background" position="799,331" size="100,100">&lt;img src=&quot;https://ngk324.github.io/images/queen.png&quot; alt=&quot;Queen of Mars&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
 &lt;&lt;type 30ms&gt;&gt;&lt;div id=&quot;intro-text&quot;&gt;This is Queen Arya, the king’s wife. She is 57 years old and has been married for 25 years. She has been a big supporter of the king’s decisions to evolve the Mars community. She was one of the first people along with the king to come to Mars. However, there have been rumors that they have been fighting lately. They usually have a pretty private relationship.&lt;/div&gt;\&lt;&lt;/type&gt;&gt;
+
 
 &lt;&lt;if $qq1 is true&gt;&gt; [[QUEEN QUESTION 1|QQ1]] &lt;&lt;else&gt;&gt; QUEEN QUESTION 1 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if $qq2 is true&gt;&gt; [[QUEEN QUESTION 2|QQ2]]&lt;&lt;else&gt;&gt; QUEEN QUESTION 2&lt;&lt;/if&gt;&gt;
@@ -377,7 +378,7 @@ Alice picks up the teacup &lt;&lt;if $teacup is 0&gt;&gt; and notices a Dormouse
 
 &lt;&lt;set $teacup to $teacup - 1&gt;&gt; 
 
-Alice picks up the teacup &lt;&lt;if $teacup is 0&gt;&gt; and notices a Dormouse, fast asleep inside of it. &lt;&lt;elseif $teacup is 1&gt;&gt; and takes a long sip. &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="JQ1" tags="intro-background" position="28,691" size="100,100">&lt;img src=&quot;https://ngk324.github.io/images/janitor.png&quot; alt=&quot;Mars Janitor&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
+Alice picks up the teacup &lt;&lt;if $teacup is 0&gt;&gt; and notices a Dormouse, fast asleep inside of it. &lt;&lt;elseif $teacup is 1&gt;&gt; and takes a long sip. &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="JQ1" tags="intro-background" position="27,691" size="100,100">&lt;img src=&quot;https://ngk324.github.io/images/janitor.png&quot; alt=&quot;Mars Janitor&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
 &lt;div id=&quot;intro-text&quot;&gt;This is the head janitor, Joffrey, who is in charge of the sanitation department of the main community dome on Mars. He is 45 years old and was one of the first employees to travel to Mars. He has been working there ever since colonization and works alongside many employees. There was a strange malfunction with his ID when he first became janitor. He currently lives in the central housing community.&lt;/div&gt;\
 &lt;&lt;set $jq1 to false&gt;&gt; &lt;&lt;set $jatmpt to $jatmpt + 1&gt;&gt;
   	&lt;&lt;if $jq1 is true and $jatmpt lte 3&gt;&gt; [[Where were you at the time of the murder?|JQ1]]&lt;&lt;elseif $jq1 is false&gt;&gt; Where were you at the time of the murder?: Beforehand, I was cleaning and setting up for the function. I was in the back of the audience sweeping up during the function. &lt;&lt;else&gt;&gt; Where were you at the time of the murder?&lt;&lt;/if&gt;&gt;
@@ -450,7 +451,7 @@ Alice picks up the teacup &lt;&lt;if $teacup is 0&gt;&gt; and notices a Dormouse
 [[Move to Leaders Dome]] 
 &lt;&lt;/if&gt;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="21" name="SQ1" tags="intro-background" position="143,478" size="100,100">&lt;img src=&quot;https://ngk324.github.io/images/scientist.png&quot; alt=&quot;Mars Scientist&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
+</tw-passagedata><tw-passagedata pid="21" name="SQ1" tags="intro-background" position="142,478" size="100,100">&lt;img src=&quot;https://ngk324.github.io/images/scientist.png&quot; alt=&quot;Mars Scientist&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
 &lt;div id=&quot;intro-text&quot;&gt;
 This is lead scientist Dr. Wells of the Mars’ community science dome. The science dome is filled with the main labs on the planet. He is 54 years old and lives in the living quarters. The scientist had been the head of the labs for 6 years and enjoys his job. There have been some recent disagreements between the science department and the government.&lt;/div&gt;\
 &lt;&lt;set $sq1 to false&gt;&gt;  &lt;&lt;set $satmpt to $satmpt + 1&gt;&gt;
@@ -458,7 +459,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
   &lt;&lt;if $sq2 is true and $satmpt lte 3&gt;&gt; [[SCIENTIST QUESTION 2|SQ2]]&lt;&lt;elseif $sq2 is false&gt;&gt; SCIENTIST QUESTION 2: ANSWER &lt;&lt;else&gt;&gt; SCIENTIST QUESTION 2&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $sq3 is true and $satmpt lte 3&gt;&gt; [[SCIENTIST QUESTION 3|SQ3]]&lt;&lt;elseif $sq3 is false&gt;&gt; SCIENTIST QUESTION 3: ANSWER &lt;&lt;else&gt;&gt; SCIENTIST QUESTION 3&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $sq4 is true and $satmpt lte 3&gt;&gt; [[SCIENTIST QUESTION 4|SQ4]]&lt;&lt;elseif $sq4 is false&gt;&gt; SCIENTIST QUESTION 4: ANSWER &lt;&lt;else&gt;&gt; SCIENTIST QUESTION 4&lt;&lt;/if&gt;&gt;
-  
+  &lt;div id=&quot;sus-question&quot;&gt;
 &lt;&lt;if $satmpt gte 4 and $qatmpt is 1 and $jatmpt is 1&gt;&gt; 
 [[Question the Janitor]] 
 [[Question the Queen]]
@@ -468,7 +469,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
 [[Question the Queen]]
 &lt;&lt;elseif $satmpt gte 4 and $qatmpt gte 2 and $jatmpt gte 2&gt;&gt; 
 [[Move to Leaders Dome]] 
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="SQ2" tags="intro-background" position="257,470" size="100,100">&lt;img src=&quot;https://ngk324.github.io/images/scientist.png&quot; alt=&quot;Mars Scientist&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
+	&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="SQ2" tags="intro-background" position="257,471" size="100,100">&lt;img src=&quot;https://ngk324.github.io/images/scientist.png&quot; alt=&quot;Mars Scientist&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
 &lt;div id=&quot;intro-text&quot;&gt;
 This is lead scientist Dr. Wells of the Mars’ community science dome. The science dome is filled with the main labs on the planet. He is 54 years old and lives in the living quarters. The scientist had been the head of the labs for 6 years and enjoys his job. There have been some recent disagreements between the science department and the government.&lt;/div&gt;\
 &lt;&lt;set $sq2 to false&gt;&gt;  &lt;&lt;set $satmpt to $satmpt + 1&gt;&gt;
@@ -476,7 +477,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
   &lt;&lt;if $sq2 is true and $satmpt lte 3&gt;&gt; [[SCIENTIST QUESTION 2|SQ2]]&lt;&lt;elseif $sq2 is false&gt;&gt; SCIENTIST QUESTION 2: ANSWER &lt;&lt;else&gt;&gt; SCIENTIST QUESTION 2&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $sq3 is true and $satmpt lte 3&gt;&gt; [[SCIENTIST QUESTION 3|SQ3]]&lt;&lt;elseif $sq3 is false&gt;&gt; SCIENTIST QUESTION 3: ANSWER &lt;&lt;else&gt;&gt; SCIENTIST QUESTION 3&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $sq4 is true and $satmpt lte 3&gt;&gt; [[SCIENTIST QUESTION 4|SQ4]]&lt;&lt;elseif $sq4 is false&gt;&gt; SCIENTIST QUESTION 4: ANSWER &lt;&lt;else&gt;&gt; SCIENTIST QUESTION 4&lt;&lt;/if&gt;&gt;
-  
+  &lt;div id=&quot;sus-question&quot;&gt;
 &lt;&lt;if $satmpt gte 4 and $qatmpt is 1 and $jatmpt is 1&gt;&gt; 
 [[Question the Janitor]] 
 [[Question the Queen]]
@@ -486,7 +487,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
 [[Question the Queen]]
 &lt;&lt;elseif $satmpt gte 4 and $qatmpt gte 2 and $jatmpt gte 2&gt;&gt; 
 [[Move to Leaders Dome]] 
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="SQ3" tags="intro-background" position="381,470" size="100,100">&lt;img src=&quot;https://ngk324.github.io/images/scientist.png&quot; alt=&quot;Mars Scientist&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
+	&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="SQ3" tags="intro-background" position="381,470" size="100,100">&lt;img src=&quot;https://ngk324.github.io/images/scientist.png&quot; alt=&quot;Mars Scientist&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
 &lt;div id=&quot;intro-text&quot;&gt;
 This is lead scientist Dr. Wells of the Mars’ community science dome. The science dome is filled with the main labs on the planet. He is 54 years old and lives in the living quarters. The scientist had been the head of the labs for 6 years and enjoys his job. There have been some recent disagreements between the science department and the government.&lt;/div&gt;\
 &lt;&lt;set $sq3 to false&gt;&gt;  &lt;&lt;set $satmpt to $satmpt + 1&gt;&gt;
@@ -494,7 +495,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
   &lt;&lt;if $sq2 is true and $satmpt lte 3&gt;&gt; [[SCIENTIST QUESTION 2|SQ2]]&lt;&lt;elseif $sq2 is false&gt;&gt; SCIENTIST QUESTION 2: ANSWER &lt;&lt;else&gt;&gt; SCIENTIST QUESTION 2&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $sq3 is true and $satmpt lte 3&gt;&gt; [[SCIENTIST QUESTION 3|SQ3]]&lt;&lt;elseif $sq3 is false&gt;&gt; SCIENTIST QUESTION 3: ANSWER &lt;&lt;else&gt;&gt; SCIENTIST QUESTION 3&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $sq4 is true and $satmpt lte 3&gt;&gt; [[SCIENTIST QUESTION 4|SQ4]]&lt;&lt;elseif $sq4 is false&gt;&gt; SCIENTIST QUESTION 4: ANSWER &lt;&lt;else&gt;&gt; SCIENTIST QUESTION 4&lt;&lt;/if&gt;&gt;
-  
+  &lt;div id=&quot;sus-question&quot;&gt;
 &lt;&lt;if $satmpt gte 4 and $qatmpt is 1 and $jatmpt is 1&gt;&gt; 
 [[Question the Janitor]] 
 [[Question the Queen]]
@@ -504,7 +505,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
 [[Question the Queen]]
 &lt;&lt;elseif $satmpt gte 4 and $qatmpt gte 2 and $jatmpt gte 2&gt;&gt; 
 [[Move to Leaders Dome]] 
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="SQ4" tags="intro-background" position="503,466" size="100,100">&lt;img src=&quot;https://ngk324.github.io/images/scientist.png&quot; alt=&quot;Mars Scientist&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
+	&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="SQ4" tags="intro-background" position="503,466" size="100,100">&lt;img src=&quot;https://ngk324.github.io/images/scientist.png&quot; alt=&quot;Mars Scientist&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
 &lt;div id=&quot;intro-text&quot;&gt;
 This is lead scientist Dr. Wells of the Mars’ community science dome. The science dome is filled with the main labs on the planet. He is 54 years old and lives in the living quarters. The scientist had been the head of the labs for 6 years and enjoys his job. There have been some recent disagreements between the science department and the government.&lt;/div&gt;\
 &lt;&lt;set $sq4 to false&gt;&gt;  &lt;&lt;set $satmpt to $satmpt + 1&gt;&gt;
@@ -512,7 +513,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
   &lt;&lt;if $sq2 is true and $satmpt lte 3&gt;&gt; [[SCIENTIST QUESTION 2|SQ2]]&lt;&lt;elseif $sq2 is false&gt;&gt; SCIENTIST QUESTION 2: ANSWER &lt;&lt;else&gt;&gt; SCIENTIST QUESTION 2&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $sq3 is true and $satmpt lte 3&gt;&gt; [[SCIENTIST QUESTION 3|SQ3]]&lt;&lt;elseif $sq3 is false&gt;&gt; SCIENTIST QUESTION 3: ANSWER &lt;&lt;else&gt;&gt; SCIENTIST QUESTION 3&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $sq4 is true and $satmpt lte 3&gt;&gt; [[SCIENTIST QUESTION 4|SQ4]]&lt;&lt;elseif $sq4 is false&gt;&gt; SCIENTIST QUESTION 4: ANSWER &lt;&lt;else&gt;&gt; SCIENTIST QUESTION 4&lt;&lt;/if&gt;&gt;
-  
+  &lt;div id=&quot;sus-question&quot;&gt;
 &lt;&lt;if $satmpt gte 4 and $qatmpt is 1 and $jatmpt is 1&gt;&gt; 
 [[Question the Janitor]] 
 [[Question the Queen]]
@@ -522,7 +523,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
 [[Question the Queen]]
 &lt;&lt;elseif $satmpt gte 4 and $qatmpt gte 2 and $jatmpt gte 2&gt;&gt; 
 [[Move to Leaders Dome]] 
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="QQ1" tags="intro-background" position="623,587" size="100,100">&lt;&lt;set $qq1 to false&gt;&gt;
+	&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="QQ1" tags="intro-background" position="623,587" size="100,100">&lt;&lt;set $qq1 to false&gt;&gt;
 &lt;&lt;set $qatmpt to $qatmpt + 1&gt;&gt;
 &lt;img src=&quot;https://ngk324.github.io/images/queen.png&quot; alt=&quot;Queen of Mars&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
 &lt;div id=&quot;intro-text&quot;&gt;This is Queen Arya, the king’s wife. She is 57 years old and has been married for 25 years. She has been a big supporter of the king’s decisions to evolve the Mars community. She was one of the first people along with the king to come to Mars. However, there have been rumors that they have been fighting lately. They usually have a pretty private relationship.&lt;/div&gt;
@@ -532,7 +533,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
   &lt;&lt;if $qq2 is true and $qatmpt lte 3&gt;&gt; [[QUEEN QUESTION 2|QQ2]]&lt;&lt;elseif $qq2 is false&gt;&gt; QUEEN QUESTION 2: ANSWER &lt;&lt;else&gt;&gt; QUEEN QUESTION 2&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $qq3 is true and $qatmpt lte 3&gt;&gt; [[QUEEN QUESTION 3|QQ3]]&lt;&lt;elseif $qq3 is false&gt;&gt; QUEEN QUESTION 3: ANSWER &lt;&lt;else&gt;&gt; QUEEN QUESTION 3&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $qq4 is true and $qatmpt lte 3&gt;&gt; [[QUEEN QUESTION 4|QQ4]]&lt;&lt;elseif $qq4 is false&gt;&gt; QUEEN QUESTION 4: ANSWER &lt;&lt;else&gt;&gt; QUEEN QUESTION 4&lt;&lt;/if&gt;&gt;
-  
+  &lt;div id=&quot;sus-question&quot;&gt;
 &lt;&lt;if $qatmpt gte 4 and $jatmpt is 1 and $satmpt is 1&gt;&gt; 
 [[Question the Scientist]] 
 [[Question the Janitor]]
@@ -542,7 +543,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
 [[Question the Janitor]]
 &lt;&lt;elseif $qatmpt gte 4 and $jatmpt gte 2 and $satmpt gte 2&gt;&gt; 
 [[Move to Leaders Dome]] 
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="QQ2" tags="intro-background" position="728,586" size="100,100">&lt;&lt;set $qq2 to false&gt;&gt;
+	&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="QQ2" tags="intro-background" position="729,586" size="100,100">&lt;&lt;set $qq2 to false&gt;&gt;
 &lt;&lt;set $qatmpt to $qatmpt + 1&gt;&gt;
 &lt;img src=&quot;https://ngk324.github.io/images/queen.png&quot; alt=&quot;Queen of Mars&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
 &lt;div id=&quot;intro-text&quot;&gt;This is Queen Arya, the king’s wife. She is 57 years old and has been married for 25 years. She has been a big supporter of the king’s decisions to evolve the Mars community. She was one of the first people along with the king to come to Mars. However, there have been rumors that they have been fighting lately. They usually have a pretty private relationship.&lt;/div&gt;
@@ -552,7 +553,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
   &lt;&lt;if $qq2 is true and $qatmpt lte 3&gt;&gt; [[QUEEN QUESTION 2|QQ2]]&lt;&lt;elseif $qq2 is false&gt;&gt; QUEEN QUESTION 2: ANSWER &lt;&lt;else&gt;&gt; QUEEN QUESTION 2&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $qq3 is true and $qatmpt lte 3&gt;&gt; [[QUEEN QUESTION 3|QQ3]]&lt;&lt;elseif $qq3 is false&gt;&gt; QUEEN QUESTION 3: ANSWER &lt;&lt;else&gt;&gt; QUEEN QUESTION 3&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $qq4 is true and $qatmpt lte 3&gt;&gt; [[QUEEN QUESTION 4|QQ4]]&lt;&lt;elseif $qq4 is false&gt;&gt; QUEEN QUESTION 4: ANSWER &lt;&lt;else&gt;&gt; QUEEN QUESTION 4&lt;&lt;/if&gt;&gt;
-  
+  &lt;div id=&quot;sus-question&quot;&gt;
 &lt;&lt;if $qatmpt gte 4 and $jatmpt is 1 and $satmpt is 1&gt;&gt; 
 [[Question the Scientist]] 
 [[Question the Janitor]]
@@ -562,7 +563,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
 [[Question the Janitor]]
 &lt;&lt;elseif $qatmpt gte 4 and $jatmpt gte 2 and $satmpt gte 2&gt;&gt; 
 [[Move to Leaders Dome]] 
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="QQ3" tags="intro-background" position="837,586" size="100,100">&lt;&lt;set $qq3 to false&gt;&gt;
+	&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="QQ3" tags="intro-background" position="837,586" size="100,100">&lt;&lt;set $qq3 to false&gt;&gt;
 &lt;&lt;set $qatmpt to $qatmpt + 1&gt;&gt;
 &lt;img src=&quot;https://ngk324.github.io/images/queen.png&quot; alt=&quot;Queen of Mars&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
 &lt;div id=&quot;intro-text&quot;&gt;This is Queen Arya, the king’s wife. She is 57 years old and has been married for 25 years. She has been a big supporter of the king’s decisions to evolve the Mars community. She was one of the first people along with the king to come to Mars. However, there have been rumors that they have been fighting lately. They usually have a pretty private relationship.&lt;/div&gt;
@@ -572,7 +573,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
   &lt;&lt;if $qq2 is true and $qatmpt lte 3&gt;&gt; [[QUEEN QUESTION 2|QQ2]]&lt;&lt;elseif $qq2 is false&gt;&gt; QUEEN QUESTION 2: ANSWER &lt;&lt;else&gt;&gt; QUEEN QUESTION 2&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $qq3 is true and $qatmpt lte 3&gt;&gt; [[QUEEN QUESTION 3|QQ3]]&lt;&lt;elseif $qq3 is false&gt;&gt; QUEEN QUESTION 3: ANSWER &lt;&lt;else&gt;&gt; QUEEN QUESTION 3&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $qq4 is true and $qatmpt lte 3&gt;&gt; [[QUEEN QUESTION 4|QQ4]]&lt;&lt;elseif $qq4 is false&gt;&gt; QUEEN QUESTION 4: ANSWER &lt;&lt;else&gt;&gt; QUEEN QUESTION 4&lt;&lt;/if&gt;&gt;
-  
+  &lt;div id=&quot;sus-question&quot;&gt;
 &lt;&lt;if $qatmpt gte 4 and $jatmpt is 1 and $satmpt is 1&gt;&gt; 
 [[Question the Scientist]] 
 [[Question the Janitor]]
@@ -582,7 +583,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
 [[Question the Janitor]]
 &lt;&lt;elseif $qatmpt gte 4 and $jatmpt gte 2 and $satmpt gte 2&gt;&gt; 
 [[Move to Leaders Dome]] 
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="QQ4" tags="intro-background" position="948,590" size="100,100">&lt;&lt;set $qq4 to false&gt;&gt;
+	&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="QQ4" tags="intro-background" position="949,590" size="100,100">&lt;&lt;set $qq4 to false&gt;&gt;
 &lt;&lt;set $qatmpt to $qatmpt + 1&gt;&gt;
 &lt;img src=&quot;https://ngk324.github.io/images/queen.png&quot; alt=&quot;Queen of Mars&quot; width=&quot;300px&quot; align=&quot;left&quot;&gt;
 &lt;div id=&quot;intro-text&quot;&gt;This is Queen Arya, the king’s wife. She is 57 years old and has been married for 25 years. She has been a big supporter of the king’s decisions to evolve the Mars community. She was one of the first people along with the king to come to Mars. However, there have been rumors that they have been fighting lately. They usually have a pretty private relationship.&lt;/div&gt;
@@ -592,7 +593,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
   &lt;&lt;if $qq2 is true and $qatmpt lte 3&gt;&gt; [[QUEEN QUESTION 2|QQ2]]&lt;&lt;elseif $qq2 is false&gt;&gt; QUEEN QUESTION 2: ANSWER &lt;&lt;else&gt;&gt; QUEEN QUESTION 2&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $qq3 is true and $qatmpt lte 3&gt;&gt; [[QUEEN QUESTION 3|QQ3]]&lt;&lt;elseif $qq3 is false&gt;&gt; QUEEN QUESTION 3: ANSWER &lt;&lt;else&gt;&gt; QUEEN QUESTION 3&lt;&lt;/if&gt;&gt;
   &lt;&lt;if $qq4 is true and $qatmpt lte 3&gt;&gt; [[QUEEN QUESTION 4|QQ4]]&lt;&lt;elseif $qq4 is false&gt;&gt; QUEEN QUESTION 4: ANSWER &lt;&lt;else&gt;&gt; QUEEN QUESTION 4&lt;&lt;/if&gt;&gt;
- 
+ &lt;div id=&quot;sus-question&quot;&gt;
 &lt;&lt;if $qatmpt gte 4 and $jatmpt is 1 and $satmpt is 1&gt;&gt; 
 [[Question the Scientist]] 
 [[Question the Janitor]]
@@ -602,7 +603,7 @@ This is lead scientist Dr. Wells of the Mars’ community science dome. The scie
 [[Question the Janitor]]
 &lt;&lt;elseif $qatmpt gte 4 and $jatmpt gte 2 and $satmpt gte 2&gt;&gt; 
 [[Move to Leaders Dome]] 
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Choose Murderer" tags="" position="957,1016" size="100,100">Who Do You Think Murdered the King? 
+	&lt;&lt;/if&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Choose Murderer" tags="" position="957,1016" size="100,100">Who Do You Think Murdered the King? 
 
 [[Scientist]]
 [[Janitor]]
